@@ -1,0 +1,28 @@
+.nav {
+    color: red;
+    box-shadow: 100px;
+    background-color: rgb(22, 180, 86);
+}
+
+.body {
+    color: blue;
+    box-sizing: content-box;
+    background-color: rgb(144, 235, 205);
+    width: 400px;
+    height: 340px;
+    margin: 50px;
+    display: flex;
+    align-items: center;
+    border-radius: 20%;
+}
+
+.footer {
+    color: yellow;
+}
+
+button {
+    width: 80px;
+    background-color: azure;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 20px;
+}

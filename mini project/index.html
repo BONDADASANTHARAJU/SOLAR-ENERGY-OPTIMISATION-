@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <STYLE>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f5f5f5;
+        }
+
+        header,
+        footer {
+            background-color: #25d6dc;
+            padding: 20px;
+            color: #fff;
+            text-align: center;
+            position: fixed;
+            width: 100%;
+            z-index: 1;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 2rem;
+        }
+
+        header button {
+            background-color: #fff;
+            color: #25d6dc;
+            border: none;
+            padding: 5px 10px;
+            font-size: 0.8rem;
+            cursor: pointer;
+            margin-left: 10px;
+        }
+
+        .body {
+            padding: 100px 0;
+            text-align: center;
+        }
+
+        .body a {
+            color: #0d0f0f;
+            text-decoration: none;
+        }
+
+        .body h1 {
+            font-size: 2rem;
+            margin-bottom: 20px;
+        }
+
+        footer {
+            top: auto;
+            bottom: 0;
+        }
+
+        footer h1 {
+            font-size: 1.5rem;
+        }
+
+        .sequence {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin-top: 50px;
+        }
+
+        .sequence .body {
+            flex-basis: calc(33.33% - 20px);
+            margin-bottom: 20px;
+        }
+
+        @media (max-width: 768px) {
+            header,
+            footer {
+                padding: 10px;
+            }
+
+            header h1 {
+                font-size: 1.5rem;
+            }
+
+            footer h1 {
+                font-size: 1.2rem;
+            }
+
+            .body {
+                padding: 50px 0;
+            }
+
+            .body h1 {
+                font-size: 1.5rem;
+            }
+
+            .sequence .body {
+                flex-basis: calc(50% - 20px);
+            }
+        }
+
+        @media (max-width: 480px) {
+            .sequence .body {
+                flex-basis: 100%;
+            }
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+            box-sizing: border-box;
+        }
+
+        .body h1 {
+            font-size: 1.5rem;
+        }
+
+        @media (max-width: 768px) {
+            .body h1 {
+                font-size: 1.2rem;
+            }
+        }
+    </STYLE>
+</head>
+<nav class="nav">
+    <div>
+        <h1><center> WELCOME TO SOLAR PLANTATION COMMUNITY</center></h1>
+        
+    </div>
+</nav>
+<body>
+    <div class="container">
+        <div class="sequence">
+            <div class="body">
+                <a href="govscheme.html">
+                    <h1>1.GOVERNMENT SCHEMES</h1>
+                </a>
+            </div>
+            <div class="body">
+                <a href="https://pmsuryaghar.gov.in/">
+                    <h1>2.HOW TO APPLY?</h1>
+                </a>
+            </div>
+            <div class="body">
+                <a href="insta.html">
+                    <h1>3.INSTALLATION STEPS</h1>
+                </a>
+            </div>
+            <div class="body">
+                <a href="clean.html"><h1>4.CLEANING SOLAR PLANTS</h1></a>
+                
+            </div>
+            <div class="body">
+                <a href="work.html"><h1>5.THE WORKING OF SOLAR </h1></a>
+            </div>
+            <div class="body">
+               <a href="https://www.calculator.net/electricity-calculator.html?appliance=&power=340&powerunit=W&capacity=10&usage=10&usageunit=hpd&price=0.15&x=Calculate"> <h1>6.CALUCATING AMOUNT</h1></a>
+            </div>
+            <div class="body">
+                <a href="activity.html"><h1> 7.ACTIVITY LOG</h1></a>
+            </div>
+        </div>
+    </div>
+</body>
+<footer>
+    <div class="footer">
+        <h1><center> </center></h1>
+    </div>
+</footer>
+</html>

@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Improved Code</title>
+    <style>
+        :root {
+            --primary-color: #333;
+            --secondary-color: #d8d5d5;
+            --background-color: #e9e8eea4;
+            --box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            color: var(--secondary-color);
+            background-color: var(--background-color);
+        }
+
+        header {
+            background-color: var(--primary-color);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 20px;
+        }
+
+        header a {
+            color: var(--secondary-color);
+            text-decoration: none;
+            margin: 0 10px;
+        }
+
+        main {
+            display: flex;
+        }
+
+        nav {
+            width: 20%;
+            padding: 20px;
+            box-sizing: border-box;
+            background-color: var(--background-color);
+            box-shadow: var(--box-shadow);
+        }
+
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        nav ul li {
+            margin-bottom: 10px;
+        }
+
+        nav ul li a {
+            display: block;
+            padding: 5px 10px;
+            color: var(--primary-color);
+            text-decoration: none;
+        }
+
+        nav ul li a:hover {
+            background-color: #3fe2dabd;
+        }
+
+        article {
+            width: 80%;
+            padding: 20px;
+            box-sizing: border-box;
+            background-color:#110c0c
+        }
+
+        footer {
+            background-color: var(--primary-color);
+            color: var(--secondary-color);
+            text-align: center;
+            padding: 10px;
+            margin-top: 20px;
+            box-shadow: var(--box-shadow);
+        }
+        .slider {
+	width: 400px;
+	height: 300px;
+	overflow: hidden;
+	position: relative;
+	box-sizing: border-box;
+}
+.scroll img{
+    width: 400px;
+	height: 300px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+.slider img {
+	width: 400px;
+	height: 300px;
+	position: absolute;
+	animation: slide 12s infinite;
+	opacity: 0;
+	box-sizing: border-box;
+	transition: transform 0.2s ease-in-out;
+}
+
+.slider img:nth-child(1) {
+	animation-delay: 0s;
+}
+
+.slider img:nth-child(2) {
+	animation-delay: 3s;
+}
+
+.slider img:nth-child(3) {
+	animation-delay: 6s;
+}
+
+.slider img:nth-child(4) {
+	animation-delay: 9s;
+}
+
+@keyframes slide {
+	0% {opacity: 0;}
+	8% {opacity: 1;}
+	33% {opacity: 1;}
+	41% {opacity: 0;}
+	100% {opacity: 0;}
+}
+
+.slider img:hover {
+	transform: scale(1.5);
+}
+    </style>
+    
+</head>
+<body>
+    <header>
+        <img src="swarlogo.jpg">
+        <h1>SOLAR SCHEMES  </h1>
+        <nav>
+            <ul>
+                <li><a href="register.html">Register</a></li>
+                <li><a href="login.html">Login</a></li>
+                <li><a href="about.html">About</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <nav>
+           
+             <ul>
+                <li><a href="index.html">Solar Schemes</a></li>
+                <li><a href="https://www.myscheme.gov.in/schemes/pmsgmb">AVAILABLE SCHEMES</a></li>
+                <li><a href="https://www.myscheme.gov.in">All govt schemes</a></li>
+                <li><a href="query.html">queries</a></li>
+               
+
+            </ul>
+        
+        </nav>
+
+        <div class="slider">
+            <img src="1-crore-households-to-get-rooftop-solar-under-Pradhan-Mantri-Suryodaya-Yojana.jpg" alt="Image 1">
+            <img src="STR.jpg" alt="Image 3">
+            <img src="panel.jpg" alt="Image 4">
+        </div>
+    
+        <script src="script.js"></script><br>
+    
+        <article>
+            <!-- Content goes here -->
+            Optimizing energy using solar in rural areas is a crucial step towards sustainable development and energy security. It involves harnessing the abundant sunlight in these regions and converting it into usable power, thereby bridging the energy gap and promoting socio-economic growth.
+
+        </article>
+</main>
+<div class="scroll">
+    <marquee scrollamount="15">
+        <img src="pan1.jpg" alt="Image 1">
+        <img src="pan2.jpg" alt="Image 2">
+        <img src="panel.jpg" alt="Image 3">
+    </marquee>
+</div>
+    <footer>
+        &copy; 2023 My Website
+    </footer>
+</body>
+</html>

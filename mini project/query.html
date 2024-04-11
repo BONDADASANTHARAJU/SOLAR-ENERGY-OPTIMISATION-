@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Frequently Asked Questions</title>
+    <style>
+        body {
+            background-color: #3f3f3f;
+            background-image: url("grunge-background.png"), radial-gradient(#4b4b4b 1px, transparent 0), radial-gradient(#4b4b4b 1px, transparent 0);
+            background-position: 0 0, 25px 25px, 30px 30px;
+            background-size: 50px 50px;
+            color: #ffffff;
+            font-family: Arial, sans-serif;
+        }
+
+        h1 {
+            font-size: 5em;
+            font-weight: bold;
+            letter-spacing: 0.1em;
+            margin: 0 0 0.2em;
+            text-align: center;
+            text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
+        }
+
+       .question {
+            margin-bottom: 10px;
+            cursor: pointer;
+            }
+
+       .answer {
+            margin-top: 5px;
+            display: none;
+            color: greenyellow;
+        }
+
+        /* Painting marks */
+       .painting-mark {
+            position: absolute;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background-color: random();
+            opacity: 0.3;
+            animation: paint 5s linear infinite;
+        }
+
+        @keyframes paint {
+            0% {
+                transform: translate(-50%, -50%) rotate(0deg);
+            }
+            100% {
+                transform: translate(-50%, -50%) rotate(360deg);
+            }
+        }
+
+       .painting-mark-1 {
+            left: 10%;
+            top: 10%;
+        }
+
+       .painting-mark-2 {
+            left: 30%;
+            top: 30%;
+        }
+
+       .painting-mark-3 {
+            left: 60%;
+            top: 60%;
+        }
+
+        .add-qa-button {
+            position: fixed;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+    </style>
+</head>
+<body>
+    <h1><marquee scrollamount="15">Frequently Asked Questions</marquee></h1>
+    <div class="question" onclick="showAnswer(1)">
+        <h2>1: Why is solar energy more reliable in rural areas?  </h2>
+        <h2 class="answer" id="answer1">Solar power provides consistent electricity, even during weather-related power outages.</h2>
+    </div>
+    <div class="question" onclick="showAnswer(2)">
+        <h2>2:How complex is solar infrastructure setup?</h2>
+        <h2 class="answer" id="answer2">Solar systems are simpler to install compared to other renewable sources, and off-grid solar setups can be DIY-friendly.</h2>
+    </div>
+    <div class="question" onclick="showAnswer(3)">
+        <h2>3:What economic opportunities does solar energy offer?</h2>
+        <h2 class="answer" id="answer3">Solar projects create jobs and stimulate local economies in rural regions.</h2>
+    </div>
+    <div class="question" onclick="showAnswer(4)">
+        <h2>4:How does solar energy impact health?</h2>
+        <h2 class="answer" id="answer4">By replacing kerosene lamps, solar power improves indoor air quality and reduces health risks.</h2>
+    </div>
+    <div class="question" onclick="showAnswer(5)">
+        <h2>5: What environmental benefit does solar energy bring?</h2>
+        <h2 class="answer" id="answer5"> Solar is eco-friendly, reducing carbon footprint and conserving water resources.</h2>
+    </div>
+    <div class="painting-mark painting-mark-1"></div>
+    <div class="painting-mark painting-mark-2"></div>
+    <div class="painting-mark painting-mark-3"></div>
+    <script>
+        function showAnswer(questionNumber) {const answerElement = document.getElementById(`answer${questionNumber}`);
+            answerElement.style.display = answerElement.style.display === 'none'? 'block' : 'none';
+        }
+        function addQuestion() {
+            const questionNumber = document.querySelectorAll('.question').length + 1;
+            const questionText = prompt(`Enter Question ${questionNumber}:`);
+            const answerText = prompt(`Enter Answer ${questionNumber}:`);
+
+            if (questionText && answerText) {
+                const questionElement = document.createElement('div');
+                questionElement.className = 'question';
+                questionElement.onclick = function() {
+                    showAnswer(questionNumber);
+                };
+                questionElement.innerHTML = `
+                    <h2 class="question-number">${questionNumber}:${questionText}?</h2>
+                    <h2 class="answer" id="answer${questionNumber}">${answerText}.</h2>`;
+                document.body.appendChild(questionElement);
+            } else {
+                alert('Please enter both question and answer.');
+            }
+        }
+    </script>
+    <button onclick="addQuestion()" class="add-qa-button">ADD Q&A</button>
+</body>
+</html>
